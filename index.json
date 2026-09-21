@@ -1,0 +1,23 @@
+{
+  "name": "Frost's Eclipse Repository",
+  "id": "com.frost.repository",
+  "url": "https://VOTRE_PSEUDO.github.io/EclipseRepo/index.json",
+  "author": "Frost",
+  "packages": {
+    "com.frost.eclipse-tools": {
+      "versions": {
+        "1.0.0": {
+          "name": "com.frost.eclipse-tools",
+          "displayName": "Eclipse Avatar Tools",
+          "version": "1.0.0",
+          "author": "Frost",
+          "url": "COLLEZ_ICI_LE_LIEN_DIRECT_VERS_VOTRE_ZIP",
+          "dependencies": {
+            "com.vrchat.avatars": "^3.5.0",
+            "com.vrchat.base": "^3.5.0"
+          }
+        }
+      }
+    }
+  }
+}

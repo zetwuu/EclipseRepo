@@ -9,35 +9,36 @@
             background-color: #0f1115;
             color: #e6e6e6;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
             display: flex;
             justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            padding: 20px;
-            box-sizing: border-box;
         }
-        .card {
+        .container {
+            max-width: 900px;
+            width: 100%;
+        }
+        /* -- HERO SECTION -- */
+        .hero {
             background-color: #181b21;
             border: 1px solid #282c34;
             border-radius: 12px;
-            padding: 40px;
-            max-width: 500px;
-            width: 100%;
+            padding: 50px 30px;
             text-align: center;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            margin-bottom: 40px;
         }
-        h1 {
+        .hero h1 {
             margin: 0 0 10px 0;
-            font-size: 26px;
+            font-size: 32px;
             color: #ffffff;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
         }
-        p {
+        .hero p {
             color: #8f96a3;
-            line-height: 1.5;
-            font-size: 15px;
+            font-size: 16px;
             margin-bottom: 30px;
+            line-height: 1.5;
         }
         .btn {
             display: inline-block;
@@ -45,17 +46,68 @@
             color: #ffffff;
             font-weight: 600;
             text-decoration: none;
-            padding: 14px 28px;
+            padding: 16px 36px;
             border-radius: 8px;
             font-size: 16px;
             transition: background-color 0.2s ease, transform 0.1s ease;
         }
         .btn:hover {
             background-color: #0369a1;
-            transform: translateY(-1px);
+            transform: translateY(-2px);
+        }
+
+        /* -- FEATURES GRID -- */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 24px;
+        }
+        .feature-card {
+            background-color: #181b21;
+            border: 1px solid #282c34;
+            border-radius: 12px;
+            padding: 24px;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-4px);
+            border-color: #0284c7;
+        }
+        /* Image Placeholder */
+        .feature-image {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background-color: #21252d;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555d6b;
+            font-size: 14px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            border: 1px dashed #3a404c;
+        }
+        .feature-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none; /* Affiche l'image quand elle est présente */
+        }
+        .feature-card h3 {
+            margin: 0 0 10px 0;
+            font-size: 20px;
+            color: #ffffff;
+        }
+        .feature-card p {
+            color: #8f96a3;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0;
         }
         .footer {
-            margin-top: 30px;
+            text-align: center;
+            margin-top: 50px;
             font-size: 13px;
             color: #555d6b;
         }
@@ -63,17 +115,69 @@
 </head>
 <body>
 
-<div class="card">
-    <h1>ECLIPSE AVATAR TOOLS</h1>
-    <p>Advanced workflow tools for VRChat avatar optimization, Quest conversion, auto-setup, and rendering.</p>
+<div class="container">
     
-    <a href="vcc://vpm/addRepo?url=https://zetwuu.github.io/EclipseRepo/index.json" class="btn">
-        Add to VCC
-    </a>
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>ECLIPSE AVATAR TOOLS</h1>
+        <p>A complete, non-destructive workflow extension for Unity.<br>Optimize, convert, and upload your VRChat avatars faster than ever.</p>
+        
+        <!-- REMPLACEZ "VOTRE_PSEUDO" ICI -->
+        <a href="vcc://vpm/addRepo?url=https://zetwuu.github.io/EclipseRepo/index.json" class="btn">
+            Add to VCC
+        </a>
+    </div>
+
+    <!-- Features Grid -->
+    <div class="features">
+        
+        <!-- Feature 1: Quest Converter -->
+        <div class="feature-card">
+            <div class="feature-image">
+                <!-- Mettez le lien de votre image dans src="", et supprimez le texte "Screenshot 1" -->
+                <img src="" style="display: block;" alt="Quest Converter">
+                Screenshot 1 (Quest Converter)
+            </div>
+            <h3>🥽 PC to Quest Converter</h3>
+            <p>Safely duplicate and optimize your PC avatar for Android. Strip heavy components, swap shaders to VRC Mobile, and remove unwanted PhysBones without touching your original files.</p>
+        </div>
+
+        <!-- Feature 2: Optimization -->
+        <div class="feature-card">
+            <div class="feature-image">
+                <img src="" style="display: block;" alt="VRAM Optimizer">
+                Screenshot 2 (VRAM Optimizer)
+            </div>
+            <h3>⚖️ VRAM & Audio Optimizer</h3>
+            <p>Hit Excellent rank effortlessly. Cap all your textures at 1024px to slash VRAM usage, and mass-compress audio files to Vorbis Mono to drastically reduce your avatar's download size.</p>
+        </div>
+
+        <!-- Feature 3: Auto-Setup -->
+        <div class="feature-card">
+            <div class="feature-image">
+                <img src="" style="display: block;" alt="Linter">
+                Screenshot 3 (Linter & Setup)
+            </div>
+            <h3>🔧 Smart Linter & Setup</h3>
+            <p>Destroy missing scripts that break your SDK uploads. Automatically calculate your camera Viewpoint, map all 15 Visemes in one click, and safely enforce Write Defaults.</p>
+        </div>
+
+        <!-- Feature 4: Studio -->
+        <div class="feature-card">
+            <div class="feature-image">
+                <img src="" style="display: block;" alt="Photo Studio">
+                Screenshot 4 (Photo Studio)
+            </div>
+            <h3>📸 Pro Photo Studio</h3>
+            <p>Stop uploading messy thumbnails. Deploy a 3-point professional lighting studio instantly, or switch to Green Screen mode to capture perfect cut-outs for Photoshop.</p>
+        </div>
+
+    </div>
 
     <div class="footer">
         Made with ❤️ by Frost
     </div>
+
 </div>
 
 </body>

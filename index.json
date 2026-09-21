@@ -11,7 +11,7 @@
           "displayName": "Eclipse Avatar Tools",
           "version": "1.0.0",
           "author": "Frost",
-          "url": "COLLEZ_ICI_LE_LIEN_DIRECT_VERS_VOTRE_ZIP",
+          "url": "https://github.com/zetwuu/EclipseRepo/releases/download/v1.0.0/EclipseAvatarTools.zip",
           "dependencies": {
             "com.vrchat.avatars": "^3.5.0",
             "com.vrchat.base": "^3.5.0"
